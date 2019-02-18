@@ -21,7 +21,7 @@ disqusShortname = "yourdiscussshortname"
     keywords = "blog,data science,personal"
     info = "Data Scientist"
     # avatarurl = "images/DavidDai_Headshot.png"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/avatar.png"
 
     #footercontent = "Enter a text here."
 
