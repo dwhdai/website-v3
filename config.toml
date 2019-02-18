@@ -20,7 +20,9 @@ disqusShortname = "yourdiscussshortname"
     description = "David Dai's personal website"
     keywords = "blog,data science,personal"
     info = "Data Scientist"
-    avatarurl = "images/DavidDai_Headshot.png"
+    # avatarurl = "images/DavidDai_Headshot.png"
+    avatarurl = "images/avatar.jpg"
+
     #footercontent = "Enter a text here."
 
     dateformat = "January 2, 2006"
