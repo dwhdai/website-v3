@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/r,hugo
 # Edit at https://www.gitignore.io/?templates=r,hugo
 
@@ -16,6 +15,7 @@ hugo.darwin
 hugo.linux
 
 ### R ###
+
 # History files
 .Rhistory
 .Rapp.history
@@ -55,3 +55,6 @@ vignettes/*.pdf
 /*_files/
 
 # End of https://www.gitignore.io/api/r,hugo
+=======
+# Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
+rsconnect/
