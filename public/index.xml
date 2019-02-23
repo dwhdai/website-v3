@@ -100,25 +100,26 @@ Follow the following steps:
     </item>
     
     <item>
-      <title>About Hugo</title>
+      <title></title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.
-Setup Some fun facts about Hugo:
- Built in Go Loosely inspired by Jekyll Primarily developed by spf13 on the train while commuting to and from Manhattan. Coded in Vim using spf13-vim  Have questions or suggestions?</description>
+      <description>--  -- -- -- Hi! I&#39;m David Dai.  --  
+I&amp;rsquo;m a Data Scientist. I take data and extract information that can be used to reduce inefficiencies and improve outcomes.
+I am trained in applied statistics and machine learning.
+I have extensive experience in the healthcare sector, but am interested in a multitude of areas, including technology, education, and hockey analytics.
+When I&amp;rsquo;m not working, I enjoy fitness and watching the Toronto Maple Leafs.</description>
     </item>
     
     <item>
-      <title>Contact</title>
+      <title>Contact Me</title>
       <link>/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contact/</guid>
-      <description>Follow me, @johndoe.</description>
+      <description>If you&amp;rsquo;d like to chat about statistics, data science, machine learning, or something I&amp;rsquo;ve written about, send me a message!
+You can also find me on Linkedin and Twitter.</description>
     </item>
     
     <item>
