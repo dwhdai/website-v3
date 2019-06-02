@@ -78,7 +78,7 @@ disqusShortname = "yourdiscussshortname"
         [[languages.en.menu.main]]
         name = "CV"
         weight = 1
-        url = "/cv.pdf"
+        url = "/DavidDai_CV.pdf"
         target = "_blank"
 
         [[languages.en.menu.main]]
