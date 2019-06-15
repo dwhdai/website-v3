@@ -1,0 +1,17 @@
+---
+title: "St. Michael's Hospital ED Nurse Assignment App"
+author: "David Dai and Neal Kaw"
+date: 'Updated: `r format(Sys.Date())`'
+tags:
+- Shiny
+- healthcare
+categories: R
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+*This post was originally posted [here](https://science.data.blog/2019/05/09/ed-nurse-assignment/).*
+
+# Test
