@@ -6,10 +6,20 @@
     <description>Recent content on David Dai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>St. Michael&#39;s Hospital ED Nurse Assignment App</title>
+      <link>/projects/2019-06-15-rn-assignment/</link>
+      <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2019-06-15-rn-assignment/</guid>
+      <description> This post was originally posted here.
+Test  </description>
+    </item>
     
     <item>
       <title>Hugo coder wiki</title>
@@ -120,15 +130,6 @@ When I&amp;rsquo;m not working, I enjoy fitness and watching the Toronto Maple L
       <guid>/contact/</guid>
       <description>If you&amp;rsquo;d like to chat about statistics, data science, machine learning, or something I&amp;rsquo;ve written about, send me a message!
 You can also find me on Linkedin and Twitter.</description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/</guid>
-      <description>Nothing to see here&amp;hellip; Move along!</description>
     </item>
     
   </channel>

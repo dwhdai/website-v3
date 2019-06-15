@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>healthcare on David Dai</title>
+    <link>/tags/healthcare/</link>
+    <description>Recent content in healthcare on David Dai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/healthcare/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>St. Michael&#39;s Hospital ED Nurse Assignment App</title>
+      <link>/projects/2019-06-15-rn-assignment/</link>
+      <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2019-06-15-rn-assignment/</guid>
+      <description> This post was originally posted here.
+Test  </description>
+    </item>
+    
+  </channel>
+</rss>
