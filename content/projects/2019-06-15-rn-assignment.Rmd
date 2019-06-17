@@ -1,7 +1,7 @@
 ---
 title: "St. Michael's Hospital ED Nurse Assignment App"
 author: "David Dai and Neal Kaw"
-date: 2019-06-15
+date: '2019-06-15'
 tags:
 - Shiny
 - healthcare
@@ -14,4 +14,61 @@ knitr::opts_chunk$set(collapse = TRUE)
 
 *This post was originally posted [here](https://science.data.blog/2019/05/09/ed-nurse-assignment/).*
 
-# Test
+# Intro
+
+The St. Michael’s Hospital (SMH) Emergency Department (ED) is divided into clinical areas; each area has a requisite number of nurses. Each shift, nurses are assigned to work in a specific clinical area or a leadership role. This is known as the nurse assignment task. Optimal nurse assignment is essential for ensuring optimal patient care and improving staff satisfaction.
+
+# The Problem
+
+Nurse assignment is a daily task at the SMH ED. The task involves assigning scheduled nurses to work in various roles and locations within the ED. The objective of the task is to minimize the number of times that any individual nurse is repeatedly assigned to the same role or location within the same series of shifts, while ensuring that each role or location is assigned the number of personnel required. Repeat assignments are considered undesirable as nurses prefer variety in their work. This variety improves job satisfaction and is also essential to maintaining critical skills and competencies. Additionally, each nurse is only assigned to roles or locations that they are qualified to fill. Nurse assignment in the SMH ED has traditionally been a manual task and is labour-intensive; on average, it took 1 to 1.5 hours to generate assignments for one day.
+
+# The Solution
+
+The solution that was employed at SMH involved 1) building a mathematical model that produces a repetition-minimizing assignment of nurses, given a schedule, and 2) designing an interactive web application that facilitates the daily assignment process. Additionally, core functionalities surrounding the assignment process, like schedule inputting and assignment record-keeping, were also included in the solution to streamline the workflow.
+
+# The People
+
+For this project, we collaborated with the ED management, administrative staff, as well as senior ED nurses, who each contributed important input and feedback surrounding the assignment process. The management provided overall goals for the assignment process; the administrative staff and the senior ED nurses provided insight on the current process, as well as day-to-day operational details that needed to be included in the design of the solution.
+
+In this blog post, we aim to highlight the process we took and some challenges we faced throughout the development of the solution.
+
+# Optimization Model
+
+We formulated a mathematical model (in particular, an integer programming model) to solve the nurse assignment problem. The model takes as input the names of the nurses working on the upcoming series of shifts, their qualification levels, where they have been assigned to work in previous shifts, and the number of nurses required in each role/location in each upcoming shift. The model has a set of variables to represent where each nurse will be assigned for each upcoming shift, and we programmed an algorithm to determine values of those variables which will result in a small enough number of repeat assignments.
+
+# Web App Design
+
+Throughout the design process of the app, the objective was to create a solution that 1) increases workflow efficiency, and 2) automates manual tasks, without minimal disruption to the existing workflow. With this in mind, we implemented four aspects of the scheduling-assignment workflow into the app: 1) maintaining roster of nurses and their qualifications, 2) inputting daily nurse schedule, 3) generating assignments for scheduled nurses, and 4) viewing historical assignments and reporting of historical assignment performance. The workflow implementation is depicted in Figure 1.
+
+```{r, echo = F, fig.align = "center", fig.cap = "Figure 1. Depiction of scheduling-assignment workflow implementation in the SMH ED Nurse Assignment application."}
+knitr::include_graphics("../../public/projects/2019-06-15-rn-assignment_files/ed-rn.jpg",
+                        )
+```
+
+
+# Technology used
+
+## R 
+[R](https://www.r-project.org/) is a statistical programming language that has traditionally been used for data analysis, however recent package developments have expanded the capabilities of R. One such package is Shiny.
+
+## Shiny
+
+[Shiny](https://shiny.rstudio.com/) is an R package that can be used to create interactive web applications without expertise in HTML, Javascript, or other front-end development tools. It provides R users the ability to build end-to-end solutions, from data pre-processing and modeling to user interface design. By leveraging Shiny and auxiliary Shiny packages, we created a tool that seamlessly executes the nurse assignment process by embedding the optimization model into the back-end of the application.
+
+## Data storage and access
+
+For Shiny applications, there are various ways to persistently store and access data (some of which are detailed [here](https://shiny.rstudio.com/articles/persistent-data-storage.html)). Much of this also depends on the platform the application is hosted on. For data containing sensitive information, appropriate data storage and access methods were necessary. The production implementation of the nurse assignment app is hosted on the SMH RStudio Connect platform, which allows us to store the data locally on the Connect server. For locally hosted applications (e.g. on a computer), the data can simply be stored in the local environment (e.g. the hard drive, network drive). However, if the application is hosted externally (e.g. on https://www.shinyapps.io/), then local storage [may not be possible](https://docs.rstudio.com/shinyapps.io/Storage.html). Some options are remote storage services, like Dropbox, which can easily be integrated using the [rdrop2 package](https://cran.r-project.org/web/packages/rdrop2/index.html).
+
+
+## Inputting, editing, and saving tabular data
+
+Manual data entry and editing was important for the functionality of the tool. Tabular data can be easily outputted in Shiny apps (examples [here](https://shiny.rstudio.com/gallery/)). In particular the [DT package](https://cran.r-project.org/web/packages/DT/index.html) allows users to build data outputs using the JavaScript “DataTables” library. DT also allows users to [directly edit values in data tables](https://blog.rstudio.com/2018/03/29/dt-0-4/), which can be leveraged as a data input feature (see [here](https://shiny.rstudio.com/gallery/widget-gallery.html) for additional input options in Shiny). By combining this with Shiny’s [reactive values functionality](https://shiny.rstudio.com/reference/shiny/0.14/reactiveValues.html), data can be inputted, edited, and saved.
+
+## Useful bits
+
+Two auxiliary R packages that were particularly useful in the development of the tool were [shinyjs](https://deanattali.com/shinyjs/) and [shinyWidgets](https://cran.r-project.org/web/packages/shinyWidgets/index.html). shinyjs provides additional control features for your Shiny application, and shinyWidgets includes additional widgets that provide the user with more flexibility.
+
+# Summary
+
+We strived to implement a solution to improve the SMH ED nurse assignment workflow. Our solution is an R Shiny application hosted on RStudio Connect, which includes an interactive mathematical optimization model to partially automate the assignment task. To develop a useful application, we engaged the right people, including administrative staff, nurse team leads, and management, who will all use the tool differently; we made use of relevant Shiny-related tools; and we scoped the project to specifically target inefficiencies that could be significantly improved upon with the available technology.
+
